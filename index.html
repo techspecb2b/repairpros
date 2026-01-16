@@ -124,10 +124,18 @@
         .click-hint { position: absolute; bottom: -45px; left: 50%; transform: translateX(-50%); display: flex; align-items: center; gap: 8px; color: var(--text-muted); font-size: 0.85rem; opacity: 0.7; transition: opacity 0.3s ease; }
         .phone-mockup.fixed .click-hint { opacity: 0; }
         
+        /* Phone Side Buttons */
+        .phone-btn { position: absolute; background: linear-gradient(180deg, #3a3a3a, #1a1a1a); border-radius: 2px; }
+        .phone-btn-volume { left: -3px; width: 3px; }
+        .phone-btn-volume.vol-up { top: 100px; height: 35px; }
+        .phone-btn-volume.vol-down { top: 145px; height: 35px; }
+        .phone-btn-mute { left: -3px; top: 70px; width: 3px; height: 20px; }
+        .phone-btn-power { right: -3px; top: 120px; width: 3px; height: 50px; }
+        
         /* Floating Badge Cards */
         .floating-card { position: absolute; background: rgba(17, 17, 17, 0.95); backdrop-filter: blur(20px); border-radius: 16px; padding: 1rem 1.25rem; box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4); border: 1px solid rgba(51, 198, 244, 0.2); animation: floatCard 4s ease-in-out infinite; display: flex; align-items: center; gap: 12px; z-index: 20; }
-        .floating-card.card-1 { top: 10%; right: -10%; animation-delay: 0s; }
-        .floating-card.card-2 { bottom: 15%; left: -15%; animation-delay: 2s; }
+        .floating-card.card-1 { top: 10%; right: -60%; animation-delay: 0s; }
+        .floating-card.card-2 { bottom: 15%; left: -60%; animation-delay: 2s; }
         @keyframes floatCard { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-10px); } }
         .floating-card-icon { width: 44px; height: 44px; background: rgba(51, 198, 244, 0.15); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: var(--primary); }
         .floating-card-content { display: flex; flex-direction: column; }
@@ -267,6 +275,12 @@
             </div>
             <div class="hero-visual">
                 <div class="phone-mockup" onclick="fixPhone(this)">
+                    <!-- Side Buttons -->
+                    <div class="phone-btn phone-btn-mute"></div>
+                    <div class="phone-btn phone-btn-volume vol-up"></div>
+                    <div class="phone-btn phone-btn-volume vol-down"></div>
+                    <div class="phone-btn phone-btn-power"></div>
+                    
                     <div class="phone-screen cracked">
                         <div class="dynamic-island"></div>
                         
@@ -559,7 +573,7 @@
                     <ul>
                         <li><a href="https://maps.google.com/?q=9659+LA-1+Mooringsport+LA">9659 LA-1, Mooringsport, LA</a></li>
                         <li><a href="tel:318-996-3362">(318) 996-3362</a></li>
-                        <li><a href="mailto:tyler@repairpros.us">tyler@repairpros.us</a></li>
+                        <li><a href="/cdn-cgi/l/email-protection#4e3a37222b3c0e3c2b3e2f273c3e3c213d603b3d"><span class="__cf_email__" data-cfemail="67131e0b021527150217060e1517150814491214">[email&#160;protected]</span></a></li>
                     </ul>
                 </div>
             </div>
@@ -570,7 +584,7 @@
         </div>
     </footer>
 
-    <script>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
         // Initialize Lucide icons after DOM is ready
         document.addEventListener('DOMContentLoaded', function() {
             if (typeof lucide !== 'undefined') {
@@ -589,13 +603,4 @@
             const screen = el.querySelector('.phone-screen');
             screen.classList.toggle('cracked');
             screen.classList.toggle('fixed');
-            el.classList.toggle('fixed');
-            if (typeof lucide !== 'undefined') lucide.createIcons();
-        }
-
-        function toggleMobileMenu() {
-            document.getElementById('mobileMenu').classList.toggle('active');
-        }
-    </script>
-</body>
-</html>
+            el.classList.toggle('fi
