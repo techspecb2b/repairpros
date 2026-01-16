@@ -99,9 +99,31 @@
         .phone-screen.fixed .screen-content { opacity: 1; }
         .fixed-icon { color: #fff; filter: drop-shadow(0 0 20px rgba(255,255,255,0.5)); }
         .fixed-text { color: #fff; font-weight: 700; font-size: 1rem; margin-top: 0.75rem; }
+        
+        /* Phone Side Buttons */
+        .phone-btn { position: absolute; background: linear-gradient(180deg, #3a3a3a, #1a1a1a); border-radius: 2px; }
+        .phone-btn-volume { left: -3px; width: 3px; }
+        .phone-btn-volume.vol-up { top: 80px; height: 30px; }
+        .phone-btn-volume.vol-down { top: 115px; height: 30px; }
+        .phone-btn-mute { left: -3px; top: 55px; width: 3px; height: 18px; }
+        .phone-btn-power { right: -3px; top: 95px; width: 3px; height: 45px; }
+        
+        /* Samsung Side Buttons */
+        .samsung-btn { position: absolute; background: linear-gradient(180deg, #3a3a3a, #1a1a1a); border-radius: 2px; }
+        .samsung-btn-volume { right: -3px; width: 3px; }
+        .samsung-btn-volume.vol-up { top: 100px; height: 35px; }
+        .samsung-btn-volume.vol-down { top: 145px; height: 35px; }
+        .samsung-btn-power { right: -3px; top: 200px; width: 3px; height: 40px; }
+        
+        /* iPad Side Buttons */
+        .ipad-btn { position: absolute; background: linear-gradient(180deg, #3a3a3a, #1a1a1a); border-radius: 2px; }
+        .ipad-btn-volume { top: -3px; height: 3px; }
+        .ipad-btn-volume.vol-up { right: 60px; width: 25px; }
+        .ipad-btn-volume.vol-down { right: 90px; width: 25px; }
+        .ipad-btn-power { top: 50%; right: -3px; transform: translateY(-50%); width: 3px; height: 35px; }
 
         /* ============ SAMSUNG MOCKUP ============ */
-        .samsung-mockup { width: 200px; height: 420px; background: linear-gradient(145deg, #2a2a2a, #1a1a1a); border-radius: 36px; padding: 8px; cursor: pointer; animation: float 6s ease-in-out infinite; animation-delay: 0.5s; box-shadow: 0 30px 60px rgba(0,0,0,0.4); }
+        .samsung-mockup { width: 200px; height: 420px; background: linear-gradient(145deg, #2a2a2a, #1a1a1a); border-radius: 36px; padding: 8px; cursor: pointer; animation: float 6s ease-in-out infinite; animation-delay: 0.5s; box-shadow: 0 30px 60px rgba(0,0,0,0.4); position: relative; }
         .samsung-mockup.fixed { animation: float 6s ease-in-out infinite, celebrate 0.5s ease; }
         .samsung-screen { width: 100%; height: 100%; border-radius: 30px; position: relative; overflow: hidden; transition: all 0.5s ease; background: #0a0a0a; }
         .samsung-screen.fixed { background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%); }
@@ -125,7 +147,7 @@
         .samsung-screen.fixed .samsung-content { opacity: 1; }
 
         /* ============ IPAD MOCKUP ============ */
-        .ipad-mockup { width: 280px; height: 200px; background: linear-gradient(145deg, #2a2a2a, #1a1a1a); border-radius: 20px; padding: 12px; cursor: pointer; animation: float 6s ease-in-out infinite; animation-delay: 1s; box-shadow: 0 30px 60px rgba(0,0,0,0.4); }
+        .ipad-mockup { width: 280px; height: 200px; background: linear-gradient(145deg, #2a2a2a, #1a1a1a); border-radius: 20px; padding: 12px; cursor: pointer; animation: float 6s ease-in-out infinite; animation-delay: 1s; box-shadow: 0 30px 60px rgba(0,0,0,0.4); position: relative; }
         .ipad-mockup.fixed { animation: float 6s ease-in-out infinite, celebrate 0.5s ease; }
         .ipad-screen { width: 100%; height: 100%; background: #0a0a0a; border-radius: 10px; display: flex; align-items: center; justify-content: center; position: relative; transition: all 0.5s ease; }
         .ipad-screen.fixed { background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%); }
@@ -161,8 +183,8 @@
         .joycon-left .joycon-rail { right: 0; }
         .joycon-right .joycon-rail { left: 0; }
         
-        .switch-tablet { width: 180px; height: 110px; background: linear-gradient(180deg, #2a2a2a, #1a1a1a); border-radius: 8px; display: flex; align-items: center; justify-content: center; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
-        .switch-screen { width: 168px; height: 98px; background: #0a0a0a; border-radius: 4px; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; transition: all 0.5s ease; }
+        .switch-tablet { width: 180px; height: 160px; background: linear-gradient(180deg, #2a2a2a, #1a1a1a); border-radius: 8px; display: flex; align-items: center; justify-content: center; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+        .switch-screen { width: 168px; height: 148px; background: #0a0a0a; border-radius: 4px; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; transition: all 0.5s ease; }
         .switch-screen.fixed { background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%); }
         
         .drift-warning { display: flex; flex-direction: column; align-items: center; transition: opacity 0.5s ease; }
@@ -235,6 +257,12 @@
             <div class="device-visual">
                 <div>
                     <div class="phone-mockup" onclick="fixPhone(this)">
+                        <!-- Side Buttons -->
+                        <div class="phone-btn phone-btn-mute"></div>
+                        <div class="phone-btn phone-btn-volume vol-up"></div>
+                        <div class="phone-btn phone-btn-volume vol-down"></div>
+                        <div class="phone-btn phone-btn-power"></div>
+                        
                         <div class="phone-screen">
                             <div class="dynamic-island"></div>
                             <div class="crack-lines">
@@ -306,6 +334,11 @@
             <div class="device-visual">
                 <div>
                     <div class="samsung-mockup" onclick="fixSamsung(this)">
+                        <!-- Side Buttons -->
+                        <div class="samsung-btn samsung-btn-volume vol-up"></div>
+                        <div class="samsung-btn samsung-btn-volume vol-down"></div>
+                        <div class="samsung-btn samsung-btn-power"></div>
+                        
                         <div class="samsung-screen">
                             <div class="samsung-camera"></div>
                             <div class="oled-damage">
@@ -346,6 +379,11 @@
             <div class="device-visual">
                 <div>
                     <div class="ipad-mockup" onclick="fixIpad(this)">
+                        <!-- Side Buttons -->
+                        <div class="ipad-btn ipad-btn-volume vol-up"></div>
+                        <div class="ipad-btn ipad-btn-volume vol-down"></div>
+                        <div class="ipad-btn ipad-btn-power"></div>
+                        
                         <div class="ipad-camera"></div>
                         <div class="ipad-screen">
                             <div class="dead-battery">
