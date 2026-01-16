@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services | Repair Pros - Professional Device Repair</title>
+    <meta name="description" content="Expert repair services for phones, tablets, computers, game consoles and more. Same-day repairs in Mooringsport, Louisiana.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        :root {
+            --primary: #33C6F4;
+            --primary-dark: #1ba8d4;
+            --primary-light: #5dd4f7;
+            --bg-primary: #000000;
+            --bg-secondary: #0a0a0a;
+            --bg-card: #111111;
+            --light: #FFFFFF;
+            --text-muted: #888888;
+            --text-secondary: #cccccc;
+            --danger: #ff3333;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Outfit', sans-serif; background: var(--bg-primary); color: var(--light); line-height: 1.6; }
+
+        /* Navigation */
+        nav { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; background: rgba(0, 0, 0, 0.9); backdrop-filter: blur(20px); border-bottom: 1px solid rgba(51, 198, 244, 0.15); }
+        .nav-container { max-width: 1400px; margin: 0 auto; padding: 0 2rem; display: flex; justify-content: space-between; align-items: center; height: 80px; }
+        .logo { display: flex; align-items: center; text-decoration: none; }
+        .logo-text { font-weight: 800; font-size: 1.5rem; color: var(--light); }
+        .logo-text span { color: var(--primary); }
+        .nav-links { display: flex; gap: 2.5rem; list-style: none; }
+        .nav-links a { text-decoration: none; color: var(--text-muted); font-weight: 500; transition: color 0.3s ease; }
+        .nav-links a:hover, .nav-links a.active { color: var(--primary); }
+        .nav-cta { background: var(--primary); color: var(--bg-primary); padding: 12px 28px; border-radius: 8px; text-decoration: none; font-weight: 600; display: flex; align-items: center; gap: 8px; transition: all 0.3s ease; }
+        .nav-cta:hover { background: var(--primary-light); }
+        .mobile-menu-btn { display: none; background: none; border: none; color: var(--light); cursor: pointer; }
+        .mobile-menu { display: none; position: fixed; top: 80px; left: 0; right: 0; background: rgba(0, 0, 0, 0.98); padding: 2rem; }
+        .mobile-menu.active { display: block; }
+        .mobile-menu a { display: block; padding: 1rem 0; color: var(--text-muted); text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.1); }
+
+        /* Page Header */
+        .page-header { padding: 140px 2rem 40px; text-align: center; position: relative; }
+        .page-header::before { content: ''; position: absolute; inset: 0; background: radial-gradient(circle at 50% 0%, rgba(51, 198, 244, 0.15) 0%, transparent 50%); }
+        .page-header h1 { font-size: 3rem; font-weight: 800; margin-bottom: 1rem; position: relative; }
+        .page-header h1 span { color: var(--primary); }
+        .page-header p { color: var(--text-muted); max-width: 600px; margin: 0 auto; position: relative; }
+
+        /* Device Sections */
+        .device-section { padding: 4rem 2rem; position: relative; }
+        .device-section:nth-child(even) { background: var(--bg-secondary); }
+        .device-container { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+        .device-section:nth-child(even) .device-container { direction: rtl; }
+        .device-section:nth-child(even) .device-container > * { direction: ltr; }
+
+        .device-info h2 { font-size: 2rem; font-weight: 700; margin-bottom: 1rem; display: flex; align-items: center; gap: 12px; }
+        .device-info h2 i { color: var(--primary); }
+        .device-info > p { color: var(--text-muted); margin-bottom: 1.5rem; font-size: 1.05rem; }
+        .repair-list { list-style: none; margin-bottom: 2rem; }
+        .repair-list li { padding: 0.75rem 0; border-bottom: 1px solid rgba(255,255,255,0.08); display: flex; align-items: center; gap: 12px; color: var(--text-secondary); }
+        .repair-list li i { color: var(--primary); flex-shrink: 0; }
+        .btn-primary { background: var(--primary); color: var(--bg-primary); padding: 14px 28px; border-radius: 8px; text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; gap: 8px; transition: all 0.3s ease; }
+        .btn-primary:hover { background: var(--primary-light); transform: translateY(-2px); }
+
+        /* Device Mockups Common */
+        .device-visual { display: flex; justify-content: center; align-items: center; }
+        .click-hint { text-align: center; margin-top: 1rem; color: var(--text-muted); font-size: 0.85rem; display: flex; align-items: center; justify-content: center; gap: 6px; }
+
+        /* ============ IPHONE MOCKUP ============ */
+        .phone-mockup { width: 220px; height: 440px; background: linear-gradient(145deg, #2a2a2a, #1a1a1a); border-radius: 40px; padding: 10px; cursor: pointer; animation: float 6s ease-in-out infinite; position: relative; box-shadow: 0 30px 60px rgba(0,0,0,0.4); }
+        .phone-mockup.fixed { animation: float 6s ease-in-out infinite, celebrate 0.5s ease; }
+        @keyframes float { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-15px); } }
+        @keyframes celebrate { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.05); } }
+        
+        .phone-screen { width: 100%; height: 100%; border-radius: 32px; position: relative; overflow: hidden; transition: all 0.5s ease; background: linear-gradient(180deg, #1a1a1a, #0a0a0a); }
+        .phone-screen.fixed { background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%); }
+        .dynamic-island { position: absolute; top: 10px; left: 50%; transform: translateX(-50%); width: 80px; height: 24px; background: #000; border-radius: 20px; z-index: 10; }
+        
+        .crack-lines { position: absolute; inset: 0; z-index: 3; opacity: 1; transition: opacity 0.5s ease; }
+        .phone-screen.fixed .crack-lines { opacity: 0; }
+        .crack-lines svg { width: 100%; height: 100%; }
+        .crack-lines path { fill: none; stroke-width: 2; }
+        .line-magenta { stroke: rgba(255, 0, 255, 0.7); }
+        .line-cyan { stroke: rgba(0, 255, 255, 0.7); }
+        .line-green { stroke: rgba(0, 255, 0, 0.8); }
+        .line-purple { stroke: rgba(150, 0, 255, 0.6); }
+        .line-yellow { stroke: rgba(255, 255, 0, 0.6); }
+        .line-red { stroke: rgba(255, 0, 0, 0.7); }
+        
+        .glass-cracks { position: absolute; inset: 0; z-index: 5; opacity: 1; transition: opacity 0.5s ease; }
+        .phone-screen.fixed .glass-cracks { opacity: 0; }
+        .glass-cracks svg { width: 100%; height: 100%; }
+        .glass-cracks path { fill: none; stroke: rgba(255,255,255,0.5); stroke-width: 2; }
+        
+        .screen-content { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; z-index: 6; opacity: 0; transition: opacity 0.5s ease; }
+        .phone-screen.fixed .screen-content { opacity: 1; }
+        .fixed-icon { color: #fff; filter: drop-shadow(0 0 20px rgba(255,255,255,0.5)); }
+        .fixed-text { color: #fff; font-weight: 700; font-size: 1rem; margin-top: 0.75rem; }
+
+        /* ============ SAMSUNG MOCKUP ============ */
+        .samsung-mockup { width: 200px; height: 420px; background: linear-gradient(145deg, #2a2a2a, #1a1a1a); border-radius: 36px; padding: 8px; cursor: pointer; animation: float 6s ease-in-out infinite; animation-delay: 0.5s; box-shadow: 0 30px 60px rgba(0,0,0,0.4); }
+        .samsung-mockup.fixed { animation: float 6s ease-in-out infinite, celebrate 0.5s ease; }
+        .samsung-screen { width: 100%; height: 100%; border-radius: 30px; position: relative; overflow: hidden; transition: all 0.5s ease; background: #0a0a0a; }
+        .samsung-screen.fixed { background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%); }
+        .samsung-camera { position: absolute; top: 12px; left: 50%; transform: translateX(-50%); width: 10px; height: 10px; background: #1a1a1a; border-radius: 50%; border: 2px solid #333; z-index: 10; }
+        
+        .oled-damage { position: absolute; top: 0; left: 0; right: 0; bottom: 0; z-index: 2; overflow: hidden; transition: opacity 0.5s ease; }
+        .samsung-screen.fixed .oled-damage { opacity: 0; }
+        .oled-gradient { position: absolute; top: 0; left: 0; right: 30%; bottom: 0; background: linear-gradient(180deg, #3d2844 0%, #5a3860 20%, #7a4a7a 40%, #9a5a90 60%, #b06a9a 80%, #c07aa5 100%); }
+        .oled-mint-zone { position: absolute; top: 0; right: 0; width: 35%; bottom: 0; background: linear-gradient(180deg, #d4ead8 0%, #c8e2cc 30%, #bcdac0 60%, #b0d2b4 100%); }
+        .oled-mint-lines { position: absolute; top: 0; right: 0; width: 35%; bottom: 0; background: repeating-linear-gradient(90deg, transparent, transparent 2px, rgba(90,120,95,0.3) 2px, rgba(90,120,95,0.3) 4px); }
+        .oled-bleed-bottom { position: absolute; bottom: -25px; left: 0; right: 0; height: 55%; background: radial-gradient(ellipse 100% 70% at 50% 100%, #000 0%, #000 25%, rgba(10,0,30,0.95) 40%, rgba(30,0,60,0.7) 60%, transparent 80%); }
+        .oled-bleed-pink { position: absolute; bottom: -20px; left: 0; width: 100%; height: 45%; background: radial-gradient(ellipse at 50% 100%, rgba(200,0,150,0.85) 0%, rgba(150,0,100,0.5) 35%, transparent 60%); }
+        .oled-bleed-spatter { position: absolute; bottom: -20px; left: 0; width: 100%; height: 50%; background: 
+            radial-gradient(ellipse 40% 50% at 5% 95%, #000 0%, #000 55%, transparent 75%), 
+            radial-gradient(ellipse 60% 50% at 25% 95%, #000 0%, #000 55%, transparent 75%), 
+            radial-gradient(ellipse 35% 60% at 50% 88%, #000 0%, #000 50%, transparent 70%), 
+            radial-gradient(ellipse 55% 45% at 75% 95%, #000 0%, #000 55%, transparent 75%), 
+            radial-gradient(ellipse 50% 55% at 92% 92%, #000 0%, #000 50%, transparent 70%); }
+        
+        .samsung-content { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; z-index: 6; opacity: 0; transition: opacity 0.5s ease; }
+        .samsung-screen.fixed .samsung-content { opacity: 1; }
+
+        /* ============ IPAD MOCKUP ============ */
+        .ipad-mockup { width: 280px; height: 200px; background: linear-gradient(145deg, #2a2a2a, #1a1a1a); border-radius: 20px; padding: 12px; cursor: pointer; animation: float 6s ease-in-out infinite; animation-delay: 1s; box-shadow: 0 30px 60px rgba(0,0,0,0.4); }
+        .ipad-mockup.fixed { animation: float 6s ease-in-out infinite, celebrate 0.5s ease; }
+        .ipad-screen { width: 100%; height: 100%; background: #0a0a0a; border-radius: 10px; display: flex; align-items: center; justify-content: center; position: relative; transition: all 0.5s ease; }
+        .ipad-screen.fixed { background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%); }
+        .ipad-camera { position: absolute; top: 50%; right: 10px; transform: translateY(-50%); width: 8px; height: 8px; background: #2a2a3a; border-radius: 50%; }
+        
+        .dead-battery { display: flex; flex-direction: column; align-items: center; transition: opacity 0.5s ease; }
+        .ipad-screen.fixed .dead-battery { opacity: 0; }
+        .battery-icon { width: 70px; height: 32px; border: 4px solid var(--danger); border-radius: 6px; position: relative; display: flex; align-items: center; padding: 4px; }
+        .battery-icon::after { content: ''; position: absolute; right: -8px; top: 50%; transform: translateY(-50%); width: 6px; height: 14px; background: var(--danger); border-radius: 0 3px 3px 0; }
+        .battery-level { width: 15%; height: 100%; background: var(--danger); border-radius: 2px; }
+        .dead-text { color: #888; font-size: 0.75rem; margin-top: 10px; font-weight: 500; }
+        
+        .ipad-content { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; opacity: 0; transition: opacity 0.5s ease; }
+        .ipad-screen.fixed .ipad-content { opacity: 1; }
+
+        /* ============ NINTENDO SWITCH MOCKUP ============ */
+        .switch-mockup { display: flex; align-items: center; cursor: pointer; animation: float 6s ease-in-out infinite; animation-delay: 1.5s; }
+        .switch-mockup.fixed { animation: float 6s ease-in-out infinite, celebrate 0.5s ease; }
+        .switch-mockup:hover { transform: scale(1.02); }
+        
+        .joycon { width: 50px; height: 160px; position: relative; display: flex; flex-direction: column; align-items: center; padding-top: 20px; }
+        .joycon-left { background: linear-gradient(180deg, #00d4ff, #00b8d4, #0097a7); border-radius: 25px 10px 10px 25px; box-shadow: -4px 0 20px rgba(0, 212, 255, 0.3), inset -3px 0 10px rgba(0,0,0,0.2); }
+        .joycon-right { background: linear-gradient(180deg, #ff5252, #f44336, #d32f2f); border-radius: 10px 25px 25px 10px; box-shadow: 4px 0 20px rgba(255, 82, 82, 0.3), inset 3px 0 10px rgba(0,0,0,0.2); }
+        
+        .joycon-stick { width: 22px; height: 22px; background: radial-gradient(circle at 35% 35%, #4a4a4a, #1a1a1a); border-radius: 50%; box-shadow: inset 0 2px 4px rgba(0,0,0,0.8), 0 2px 4px rgba(0,0,0,0.3); margin-bottom: 15px; }
+        .joycon-buttons { display: grid; grid-template-columns: repeat(2, 12px); grid-template-rows: repeat(2, 12px); gap: 4px; }
+        .joycon-btn { width: 12px; height: 12px; background: rgba(0,0,0,0.4); border-radius: 50%; box-shadow: inset 0 1px 2px rgba(0,0,0,0.5); }
+        .joycon-dpad { position: relative; width: 30px; height: 30px; }
+        .dpad-h, .dpad-v { position: absolute; background: rgba(0,0,0,0.4); border-radius: 2px; }
+        .dpad-h { width: 30px; height: 10px; top: 10px; left: 0; }
+        .dpad-v { width: 10px; height: 30px; top: 0; left: 10px; }
+        .joycon-rail { position: absolute; top: 15px; width: 4px; height: 130px; background: #111; border-radius: 2px; }
+        .joycon-left .joycon-rail { right: 0; }
+        .joycon-right .joycon-rail { left: 0; }
+        
+        .switch-tablet { width: 180px; height: 110px; background: linear-gradient(180deg, #2a2a2a, #1a1a1a); border-radius: 8px; display: flex; align-items: center; justify-content: center; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+        .switch-screen { width: 168px; height: 98px; background: #0a0a0a; border-radius: 4px; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; transition: all 0.5s ease; }
+        .switch-screen.fixed { background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%); }
+        
+        .drift-warning { display: flex; flex-direction: column; align-items: center; transition: opacity 0.5s ease; }
+        .switch-screen.fixed .drift-warning { opacity: 0; }
+        .drift-icon { font-size: 2rem; margin-bottom: 6px; }
+        .drift-text { font-size: 0.65rem; color: #ff6b6b; font-weight: 600; }
+        
+        .switch-content { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; opacity: 0; transition: opacity 0.5s ease; }
+        .switch-screen.fixed .switch-content { opacity: 1; }
+
+        /* CTA Section */
+        .cta-section { padding: 6rem 2rem; text-align: center; position: relative; }
+        .cta-section::before { content: ''; position: absolute; inset: 0; background: radial-gradient(circle at center, rgba(51, 198, 244, 0.1) 0%, transparent 70%); }
+        .cta-content { position: relative; z-index: 1; max-width: 600px; margin: 0 auto; }
+        .cta-content h2 { font-size: 2rem; font-weight: 700; margin-bottom: 1rem; }
+        .cta-content p { color: var(--text-muted); margin-bottom: 2rem; }
+
+        /* Footer */
+        footer { background: var(--bg-card); border-top: 1px solid rgba(51, 198, 244, 0.15); padding: 3rem 2rem; }
+        .footer-bottom { max-width: 1400px; margin: 0 auto; display: flex; justify-content: space-between; color: var(--text-muted); font-size: 0.9rem; }
+
+        @media (max-width: 1024px) {
+            .device-container { grid-template-columns: 1fr; text-align: center; gap: 3rem; }
+            .device-section:nth-child(even) .device-container { direction: ltr; }
+            .device-info h2 { justify-content: center; }
+            .device-info { order: 2; }
+            .device-visual { order: 1; }
+        }
+        @media (max-width: 768px) {
+            .nav-links, .nav-cta { display: none; }
+            .mobile-menu-btn { display: block; }
+            .page-header h1 { font-size: 2rem; }
+            .footer-bottom { flex-direction: column; gap: 1rem; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-text">Repair<span>Pros</span></span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html" class="active">Services</a></li>
+                <li><a href="needhelp.html">Need Help?</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <a href="book.html" class="nav-cta"><i data-lucide="calendar" style="width:18px;height:18px;"></i> Book Repair</a>
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()"><i data-lucide="menu"></i></button>
+        </div>
+    </nav>
+
+    <div id="mobileMenu" class="mobile-menu">
+        <a href="index.html">Home</a>
+        <a href="services.html" class="active">Services</a>
+        <a href="needhelp.html">Need Help?</a>
+        <a href="contact.html">Contact</a>
+        <a href="book.html">Book Repair</a>
+    </div>
+
+    <header class="page-header">
+        <h1>Our <span>Services</span></h1>
+        <p>Click on any device to see the magic happen. We fix them all!</p>
+    </header>
+
+    <!-- iPhone Section -->
+    <section class="device-section" id="phone">
+        <div class="device-container">
+            <div class="device-visual">
+                <div>
+                    <div class="phone-mockup" onclick="fixPhone(this)">
+                        <div class="phone-screen">
+                            <div class="dynamic-island"></div>
+                            <div class="crack-lines">
+                                <svg viewBox="0 0 180 380">
+                                    <path d="M4 0 L4 380" class="line-magenta"/>
+                                    <path d="M12 0 L12 380" class="line-cyan"/>
+                                    <path d="M20 0 L20 380" class="line-green"/>
+                                    <path d="M28 0 L28 380" class="line-purple"/>
+                                    <path d="M36 0 L36 380" class="line-yellow"/>
+                                    <path d="M44 0 L44 380" class="line-magenta"/>
+                                    <path d="M52 0 L52 380" class="line-red"/>
+                                    <path d="M60 0 L60 380" class="line-cyan"/>
+                                    <path d="M68 0 L68 380" class="line-green"/>
+                                    <path d="M76 0 L76 380" class="line-magenta"/>
+                                    <path d="M84 0 L84 380" class="line-purple"/>
+                                    <path d="M92 0 L92 380" class="line-yellow"/>
+                                    <path d="M100 0 L100 380" class="line-cyan"/>
+                                    <path d="M108 0 L108 380" class="line-green"/>
+                                    <path d="M116 0 L116 380" class="line-magenta"/>
+                                    <path d="M124 0 L124 380" class="line-red"/>
+                                    <path d="M132 0 L132 380" class="line-purple"/>
+                                    <path d="M140 0 L140 380" class="line-cyan"/>
+                                    <path d="M148 0 L148 380" class="line-green"/>
+                                    <path d="M156 0 L156 380" class="line-magenta"/>
+                                    <path d="M164 0 L164 380" class="line-yellow"/>
+                                    <path d="M172 0 L172 380" class="line-cyan"/>
+                                </svg>
+                            </div>
+                            <div class="glass-cracks">
+                                <svg viewBox="0 0 180 380">
+                                    <path d="M90 140 Q75 90 65 40 Q60 20 50 0"/>
+                                    <path d="M90 140 L45 190 L15 260 L0 320"/>
+                                    <path d="M90 140 L130 180 L160 220 L180 260"/>
+                                    <path d="M90 140 L80 220 L60 300 L40 380"/>
+                                    <path d="M90 140 L120 260 L145 340 L165 380"/>
+                                    <path d="M45 190 L10 220 L0 270"/>
+                                    <path d="M130 180 L165 200 L180 230"/>
+                                    <path d="M65 40 L30 20 L0 10"/>
+                                    <path d="M90 140 L140 100 L170 60 L180 30"/>
+                                </svg>
+                            </div>
+                            <div class="screen-content">
+                                <i data-lucide="check" class="fixed-icon" style="width:60px;height:60px;"></i>
+                                <span class="fixed-text">Good as New</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="click-hint"><i data-lucide="pointer" style="width:14px;height:14px;"></i> Click to repair</div>
+                </div>
+            </div>
+            <div class="device-info">
+                <h2><i data-lucide="smartphone" style="width:28px;height:28px;"></i> iPhone Repair</h2>
+                <p>From the latest iPhone 15 Pro Max to classic models, we repair all iPhones with genuine-quality parts and expert precision.</p>
+                <ul class="repair-list">
+                    <li><i data-lucide="check" style="width:18px;height:18px;"></i> Screen replacement (LCD & OLED)</li>
+                    <li><i data-lucide="check" style="width:18px;height:18px;"></i> Battery replacement</li>
+                    <li><i data-lucide="check" style="width:18px;height:18px;"></i> Charging port repair</li>
+                    <li><i data-lucide="check" style="width:18px;height:18px;"></i> Water damage recovery</li>
+                    <li><i data-lucide="check" style="width:18px;height:18px;"></i> Camera & speaker repair</li>
+                </ul>
+                <a href="book.html" class="btn-primary"><i data-lucide="calendar" style="width:18px;height:18px;"></i> Book iPhone Repair</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Samsung Section -->
+    <section class="device-section" id="samsung">
+        <div class="device-container">
+            <div class="device-visual">
+                <div>
+                    <div class="samsung-mockup" onclick="fixSamsung(this)">
+                        <div class="samsung-screen">
+                            <div class="samsung-camera"></div>
+                            <div class="oled-damage">
+                                <div class="oled-gradient"></div>
+                                <div class="oled-mint-zone"></div>
+                                <div class="oled-mint-lines"></div>
+                                <div class="oled-bleed-bottom"></div>
+                                <div class="oled-bleed-pink"></div>
+                                <div class="oled-bleed-spatter"></div>
+                            </div>
+                            <div class="samsung-content">
+                                <i data-lucide="check" class="fixed-icon" style="width:60px;height:60px;"></i>
+                                <span class="fixed-text">Good as New</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="click-hint"><i data-lucide="pointer" style="width:14px;height:14px;"></i> Click to repair</div>
+                </div>
+            </div>
+            <div class="device-info">
+                <h2><i data-lucide="smartphone" style="width:28px;height:28px;"></i> Samsung Repair</h2>
+                <p>Galaxy S series, Note, Z Fold, Z Flip - we handle all Samsung devices with care, including those tricky AMOLED screens.</p>
+                <ul class="repair-list">
+                    <li><i data-lucide="check" style="width:18px;height:18px;"></i> AMOLED screen replacement</li>
+                    <li><i data-lucide="check" style="width:18px;height:18px;"></i> Battery replacement</li>
+                    <li><i data-lucide="check" style="width:18px;height:18px;"></i> Charging port repair</li>
+                    <li><i data-lucide="check" style="width:18px;height:18px;"></i> Back glass replacement</li>
+                    <li><i data-lucide="check" style="width:18px;height:18px;"></i> Fold/Flip hinge repair</li>
+                </ul>
+                <a href="book.html" class="btn-primary"><i data-lucide="calendar" style="width:18px;height:18px;"></i> Book Samsung Repair</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- iPad Section -->
+    <section class="device-section" id="tablet">
+        <div class="device-container">
+            <div class="device-visual">
+                <div>
+                    <div class="ipad-mockup" onclick="fixIpad(this)">
+                        <div class="ipad-camera"></div>
+                        <div class="ipad-screen">
+                            <div class="dead-battery">
+                                <div class="battery-icon">
+                                    <div class="battery-level"></div>
+                                </div>
+                                <div class="dead-text">Low Battery</div>
+                            </div>
+                            <div class="ipad-content">
+                                <i data-lucide="check" class="fixed-icon" style="width:50px;height:50px;"></i>
+                                <span class="fixed-text">Good as New</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="click-hint"><i data-lucide="pointer" style="width:14px;height:14px;"></i> Click to repair</div>
+                </div>
+            </div>
+            <div class="device-info">
+                <h2><i data-lucide="tablet" style="width:28px;height:28px;"></i> iPad & Tablet Repair</h2>
+                <p>iPad Pro, Air, Mini, and standard iPads plus Samsung Galaxy Tabs - we bring your tablets back to life.</p>
+                <ul class="repair-list">
+                    <li><i data-lucide="check" style="width:18px;height:18px;"></i> Screen replacement</li>
+                    <li><i data-lucide="check" style="width:18px;height:18px;"></i> Battery replacement</li>
+                    <li><i data-lucide="check" style="width:18px;height:18px;"></i> Charging port repair</li>
+                    <li><i data-lucide="check" style="width:18px;height:18px;"></i> Home button / Face ID repair</li>
+                    <li><i data-lucide="check" style="width:18px;height:18px;"></i> Water damage recovery</li>
+                </ul>
+                <a href="book.html" class="btn-primary"><i data-lucide="calendar" style="width:18px;height:18px;"></i> Book Tablet Repair</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Nintendo Switch Section -->
+    <section class="device-section" id="console">
+        <div class="device-container">
+            <div class="device-visual">
+                <div>
+                    <div class="switch-mockup" onclick="fixSwitch(this)">
+                        <div class="joycon joycon-left">
+                            <div class="joycon-rail"></div>
+                            <div class="joycon-stick"></div>
+                            <div class="joycon-dpad">
+                                <div class="dpad-h"></div>
+                                <div class="dpad-v"></div>
+                            </div>
+                        </div>
+                        <div class="switch-tablet">
+                            <div class="switch-screen">
+                                <div class="drift-warning">
+                                    <div class="drift-icon">⚠️</div>
+                                    <div class="drift-text">Joy-Con Drift</div>
+                                </div>
+                                <div class="switch-content">
+                                    <i data-lucide="check" class="fixed-icon" style="width:40px;height:40px;"></i>
+                                    <span class="fixed-text" style="font-size:0.85rem;">Fixed!</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="joycon joycon-right">
+                            <div class="joycon-rail"></div>
+                            <div class="joycon-stick"></div>
+                            <div class="joycon-buttons">
+                                <div class="joycon-btn"></div>
+                                <div class="joycon-btn"></div>
+                                <div class="joycon-btn"></div>
+                                <div class="joycon-btn"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="click-hint"><i data-lucide="pointer" style="width:14px;height:14px;"></i> Click to repair</div>
+                </div>
+            </div>
+            <div class="device-info">
+                <h2><i data-lucide="gamepad-2" style="width:28px;height:28px;"></i> Game Console Repair</h2>
+                <p>Nintendo Switch, PlayStation, Xbox - we fix gaming consoles so you can get back to playing faster.</p>
+                <ul class="repair-list">
+                    <li><i data-lucide="check" style="width:18px;height:18px;"></i> Joy-Con drift fix</li>
+                    <li><i data-lucide="check" style="width:18px;height:18px;"></i> HDMI port repair</li>
+                    <li><i data-lucide="check" style="width:18px;height:18px;"></i> Disc drive repair</li>
+                    <li><i data-lucide="check" style="width:18px;height:18px;"></i> Overheating fixes</li>
+                    <li><i data-lucide="check" style="width:18px;height:18px;"></i> Controller repair</li>
+                </ul>
+                <a href="book.html" class="btn-primary"><i data-lucide="calendar" style="width:18px;height:18px;"></i> Book Console Repair</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="cta-content">
+            <h2>Don't See Your Device?</h2>
+            <p>We repair many more devices including laptops, smartwatches, and headphones. Contact us for a free quote!</p>
+            <a href="contact.html" class="btn-primary"><i data-lucide="message-circle" style="width:18px;height:18px;"></i> Get a Free Quote</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Repair Pros. All rights reserved.</p>
+            <p>90-Day Warranty on All Repairs</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            if (typeof lucide !== 'undefined') lucide.createIcons();
+        });
+        window.addEventListener('load', function() {
+            if (typeof lucide !== 'undefined') lucide.createIcons();
+        });
+
+        function fixPhone(el) {
+            const screen = el.querySelector('.phone-screen');
+            screen.classList.toggle('fixed');
+            el.classList.toggle('fixed');
+            if (typeof lucide !== 'undefined') lucide.createIcons();
+        }
+
+        function fixSamsung(el) {
+            const screen = el.querySelector('.samsung-screen');
+            screen.classList.toggle('fixed');
+            el.classList.toggle('fixed');
+            if (typeof lucide !== 'undefined') lucide.createIcons();
+        }
+
+        function fixIpad(el) {
+            const screen = el.querySelector('.ipad-screen');
+            screen.classList.toggle('fixed');
+            el.classList.toggle('fixed');
+            if (typeof lucide !== 'undefined') lucide.createIcons();
+        }
+
+        function fixSwitch(el) {
+            const screen = el.querySelector('.switch-screen');
+            screen.classList.toggle('fixed');
+            el.classList.toggle('fixed');
+            if (typeof lucide !== 'undefined') lucide.createIcons();
+        }
+
+        function toggleMobileMenu() {
+            document.getElementById('mobileMenu').classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
