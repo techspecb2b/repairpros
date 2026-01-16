@@ -48,7 +48,7 @@
         .page-header p { color: var(--text-muted); max-width: 600px; margin: 0 auto; position: relative; }
 
         .contact-section { padding: 4rem 2rem 6rem; }
-        .contact-container { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; }
+        .contact-container { max-width: 800px; margin: 0 auto; }
 
         .contact-info { display: flex; flex-direction: column; gap: 2rem; }
         .info-card { background: var(--bg-card); border: 1px solid rgba(255,255,255,0.08); border-radius: 16px; padding: 2rem; }
@@ -61,16 +61,7 @@
         .hours-grid span { color: var(--text-muted); }
         .hours-grid strong { color: var(--light); }
 
-        .contact-form { background: var(--bg-card); border: 1px solid rgba(255,255,255,0.08); border-radius: 16px; padding: 2.5rem; }
-        .contact-form h2 { font-size: 1.5rem; margin-bottom: 1.5rem; }
-        .form-group { margin-bottom: 1.5rem; }
-        .form-group label { display: block; margin-bottom: 0.5rem; font-weight: 500; color: var(--text-secondary); }
-        .form-group input, .form-group textarea, .form-group select { width: 100%; padding: 14px 16px; background: var(--bg-primary); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; color: var(--light); font-family: inherit; font-size: 1rem; transition: border-color 0.3s ease; }
-        .form-group input:focus, .form-group textarea:focus, .form-group select:focus { outline: none; border-color: var(--primary); }
-        .form-group textarea { min-height: 120px; resize: vertical; }
-        .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
-
-        .btn-primary { background: var(--primary); color: var(--bg-primary); padding: 16px 32px; border: none; border-radius: 8px; font-weight: 600; font-size: 1rem; cursor: pointer; display: inline-flex; align-items: center; gap: 8px; transition: all 0.3s ease; width: 100%; justify-content: center; }
+        .btn-primary { background: var(--primary); color: var(--bg-primary); padding: 16px 32px; border: none; border-radius: 8px; font-weight: 600; font-size: 1rem; cursor: pointer; display: inline-flex; align-items: center; gap: 8px; transition: all 0.3s ease; text-decoration: none; }
         .btn-primary:hover { background: var(--primary-light); }
 
         .map-container { margin-top: 2rem; border-radius: 12px; overflow: hidden; height: 200px; background: var(--bg-secondary); display: flex; align-items: center; justify-content: center; border: 1px solid rgba(255,255,255,0.08); }
@@ -79,14 +70,10 @@
         footer { background: var(--bg-card); border-top: 1px solid rgba(51, 198, 244, 0.15); padding: 3rem 2rem; }
         .footer-bottom { max-width: 1400px; margin: 0 auto; display: flex; justify-content: space-between; color: var(--text-muted); font-size: 0.9rem; }
 
-        @media (max-width: 1024px) {
-            .contact-container { grid-template-columns: 1fr; }
-        }
         @media (max-width: 768px) {
             .nav-links, .nav-cta { display: none; }
             .mobile-menu-btn { display: block; }
             .page-header h1 { font-size: 2rem; }
-            .form-row { grid-template-columns: 1fr; }
             .footer-bottom { flex-direction: column; gap: 1rem; text-align: center; }
         }
     </style>
@@ -137,7 +124,7 @@
                 <div class="info-card">
                     <h3><i data-lucide="phone" style="width:20px;height:20px;"></i> Phone & Email</h3>
                     <a href="tel:318-996-3362">(318) 996-3362</a>
-                    <a href="/cdn-cgi/l/email-protection#87f3feebe2f5c7f5e2f7e6eef5f7f5e8f4a9f2f4"><span class="__cf_email__" data-cfemail="2c585540495e6c5e495c4d455e5c5e435f02595f">[email&#160;protected]</span></a>
+                    <a href="mailto:tyler@repairpros.us">tyler@repairpros.us</a>
                 </div>
 
                 <div class="info-card">
@@ -148,49 +135,6 @@
                         <span>Sunday</span><strong>Closed</strong>
                     </div>
                 </div>
-            </div>
-
-            <div class="contact-form">
-                <h2>Send Us a Message</h2>
-                <form action="https://api.web3forms.com/submit" method="POST">
-                    <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY">
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="firstName">First Name</label>
-                            <input type="text" id="firstName" name="firstName" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="lastName">Last Name</label>
-                            <input type="text" id="lastName" name="lastName" required>
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="phone">Phone</label>
-                            <input type="tel" id="phone" name="phone">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="subject">Subject</label>
-                        <select id="subject" name="subject">
-                            <option value="general">General Inquiry</option>
-                            <option value="quote">Request a Quote</option>
-                            <option value="status">Repair Status</option>
-                            <option value="other">Other</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message" required placeholder="Tell us about your device or question..."></textarea>
-                    </div>
-                    <button type="submit" class="btn-primary">
-                        <i data-lucide="send" style="width:18px;height:18px;"></i> Send Message
-                    </button>
-                </form>
             </div>
         </div>
     </section>
@@ -209,4 +153,14 @@
             }
         });
         window.addEventListener('load', function() {
-            if (typeof luc
+            if (typeof lucide !== 'undefined') {
+                lucide.createIcons();
+            }
+        });
+
+        function toggleMobileMenu() {
+            document.getElementById('mobileMenu').classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
