@@ -1,0 +1,134 @@
+[
+  {
+    "id": 1,
+    "slug": "iphone-screen-replacement-guide",
+    "title": "iPhone Screen Replacement Guide",
+    "category": "iphone",
+    "excerpt": "Everything you need to know about getting your iPhone screen replaced, from costs to what to expect during the repair process.",
+    "content": "<p>A cracked iPhone screen is one of the most common repairs we see at Repair Pros. Whether you dropped your phone on concrete or it slipped out of your pocket, a damaged screen can range from a minor annoyance to completely unusable.</p><h2>Signs You Need a Screen Replacement</h2><p>Not every crack requires immediate replacement, but here are signs you shouldn't ignore:</p><ul><li>Spider web cracks that spread across the display</li><li>Touch responsiveness issues - parts of the screen don't respond</li><li>LCD damage showing as discolored patches or lines</li><li>Glass shards that could cut your fingers</li></ul><h2>What to Expect During Repair</h2><p>At Repair Pros, most iPhone screen replacements take 30-60 minutes. We use high-quality replacement screens that match or exceed OEM specifications. Your data stays intact throughout the process.</p><h2>Protecting Your New Screen</h2><p>After your repair, we recommend a tempered glass screen protector and a quality case. These simple additions can prevent future damage and keep your phone looking new.</p>",
+    "image": "https://images.unsplash.com/photo-1565849904461-04a58ad377e0?w=800",
+    "date": "2025-01-10",
+    "readTime": "4 min read"
+  },
+  {
+    "id": 2,
+    "slug": "why-phone-battery-drains-fast",
+    "title": "Why Your Phone Battery Drains So Fast",
+    "category": "tips",
+    "excerpt": "Frustrated with a phone that dies by noon? Learn the common causes of battery drain and how to fix them.",
+    "content": "<p>Nothing is more frustrating than a phone that can't make it through the day. If you're constantly hunting for chargers, here's what might be causing your battery woes.</p><h2>Common Battery Drain Culprits</h2><ul><li><strong>Screen brightness</strong> - Auto-brightness saves more battery than you'd think</li><li><strong>Background app refresh</strong> - Apps updating in the background consume power constantly</li><li><strong>Location services</strong> - GPS is a major battery hog</li><li><strong>Push notifications</strong> - Each notification wakes your screen</li><li><strong>Old battery</strong> - Batteries degrade over time, typically after 500 charge cycles</li></ul><h2>When It's Time for a New Battery</h2><p>If your phone is 2+ years old and dies quickly even after optimizing settings, you likely need a battery replacement. Signs include:</p><ul><li>Phone shuts off at 20% or higher</li><li>Battery percentage jumps erratically</li><li>Phone gets unusually hot</li><li>Visible battery swelling (replace immediately!)</li></ul><p>At Repair Pros, battery replacements take about 30 minutes and can make your phone feel brand new again.</p>",
+    "image": "https://images.unsplash.com/photo-1585338107529-13afc5f02586?w=800",
+    "date": "2025-01-08",
+    "readTime": "3 min read"
+  },
+  {
+    "id": 3,
+    "slug": "samsung-vs-iphone-repairs",
+    "title": "Samsung vs iPhone Repairs: Key Differences",
+    "category": "samsung",
+    "excerpt": "Wondering how Samsung and iPhone repairs compare? Here's what you need to know about repairing each brand.",
+    "content": "<p>Both Samsung and Apple make excellent phones, but when it comes to repairs, there are some important differences to understand.</p><h2>Screen Repair Differences</h2><p><strong>iPhones</strong> use LCD (older models) or OLED displays. Parts are widely available and repairs are straightforward for experienced technicians.</p><p><strong>Samsung Galaxy phones</strong> use AMOLED displays that are often curved at the edges. These screens are more expensive to replace and require more precision during installation.</p><h2>Battery Replacements</h2><p>Both brands use adhesive to secure batteries, but Samsung phones often have more aggressive adhesive that requires careful removal. iPhone batteries are generally easier to access and replace.</p><h2>Repair Costs</h2><p>Generally, Samsung repairs (especially for flagship models) cost more due to:</p><ul><li>More expensive AMOLED screens</li><li>Curved glass that's harder to source</li><li>More complex disassembly required</li></ul><h2>Our Recommendation</h2><p>Regardless of brand, always choose a reputable repair shop that uses quality parts. At Repair Pros, we service both brands with equal expertise and warranty coverage.</p>",
+    "image": "https://images.unsplash.com/photo-1592899677977-9c10ca588bbd?w=800",
+    "date": "2025-01-05",
+    "readTime": "4 min read"
+  },
+  {
+    "id": 4,
+    "slug": "phone-dropped-in-water",
+    "title": "Dropped Your Phone in Water? Here's What to Do",
+    "category": "tips",
+    "excerpt": "Water damage doesn't have to mean a dead phone. Learn the right steps to take immediately after water exposure.",
+    "content": "<p>Dropped your phone in the toilet, pool, or sink? Don't panic - quick action can save your device. Here's exactly what to do.</p><h2>Immediately Do This</h2><ol><li><strong>Get it out fast</strong> - Every second counts</li><li><strong>Power it OFF</strong> - Don't try to check if it works!</li><li><strong>Remove the case</strong> - Let it breathe</li><li><strong>Remove SIM card</strong> - Shake out excess water from the tray slot</li><li><strong>Dry the exterior</strong> - Use a lint-free cloth</li></ol><h2>What NOT to Do</h2><ul><li><strong>Don't use rice</strong> - This is a myth and can introduce dust</li><li><strong>Don't use a hair dryer</strong> - Heat can damage components</li><li><strong>Don't charge it</strong> - This can cause short circuits</li><li><strong>Don't shake it vigorously</strong> - Water can spread to dry areas</li></ul><h2>Get Professional Help</h2><p>Water damage is time-sensitive. The longer moisture sits inside, the more corrosion occurs. Bring your phone to Repair Pros as soon as possible - we have specialized equipment to properly dry and clean water-damaged devices.</p>",
+    "image": "https://images.unsplash.com/photo-1525385133512-2f3bdd039054?w=800",
+    "date": "2025-01-03",
+    "readTime": "3 min read"
+  },
+  {
+    "id": 5,
+    "slug": "nintendo-switch-joycon-drift-fix",
+    "title": "Nintendo Switch Joy-Con Drift Fix",
+    "category": "console",
+    "excerpt": "Joy-Con drift making your games unplayable? Learn what causes it and how to fix this common Nintendo Switch issue.",
+    "content": "<p>Joy-Con drift is the most common Nintendo Switch problem we see. Your character moves on its own, menus scroll randomly, and games become frustrating or unplayable.</p><h2>What Causes Joy-Con Drift?</h2><p>The analog sticks use a contact-based sensor that wears down over time. Dust and debris can also accumulate under the rubber cap, causing false inputs. It's a design flaw that affects most Switch owners eventually.</p><h2>DIY Fixes to Try First</h2><ul><li><strong>Recalibrate</strong> - Go to System Settings → Controllers → Calibrate Control Sticks</li><li><strong>Clean with compressed air</strong> - Lift the rubber cap and spray underneath</li><li><strong>Update controllers</strong> - System Settings → Controllers → Update Controllers</li></ul><h2>When to Seek Repair</h2><p>If calibration and cleaning don't help, the analog stick mechanism needs replacement. This is a delicate repair that involves soldering. At Repair Pros, we can replace Joy-Con analog sticks in about an hour, and the fix is permanent.</p><h2>Prevention Tips</h2><p>Store your Switch in a case when not in use, avoid eating while playing, and consider a Pro Controller for extended gaming sessions.</p>",
+    "image": "https://images.unsplash.com/photo-1578303512597-81e6cc155b3e?w=800",
+    "date": "2024-12-28",
+    "readTime": "4 min read"
+  },
+  {
+    "id": 6,
+    "slug": "why-laptop-so-slow",
+    "title": "Why Is My Laptop So Slow?",
+    "category": "computer",
+    "excerpt": "A slow laptop doesn't always need replacing. Discover the common causes and solutions for sluggish performance.",
+    "content": "<p>Before you give up on your slow laptop, let's diagnose what's actually causing the problem. Often, the fix is simpler and cheaper than buying new.</p><h2>Top Causes of Slow Laptops</h2><h3>1. Hard Drive Issues</h3><p>If you have a traditional spinning hard drive (HDD), upgrading to an SSD is the single best improvement you can make. Boot times go from minutes to seconds.</p><h3>2. Not Enough RAM</h3><p>Modern browsers and applications are memory-hungry. If you have 4GB or less, your laptop is constantly struggling. 8GB is the minimum for comfortable use today.</p><h3>3. Too Many Startup Programs</h3><p>Programs that launch at startup slow everything down. Disable unnecessary ones in Task Manager (Windows) or System Preferences (Mac).</p><h3>4. Malware or Viruses</h3><p>Malicious software running in the background consumes resources. Run a full scan with reputable antivirus software.</p><h3>5. Overheating</h3><p>Dust buildup causes overheating, which triggers thermal throttling. A cleaning can restore performance.</p><h2>Our Recommendation</h2><p>Bring your laptop to Repair Pros for a free diagnostic. We'll identify exactly what's slowing you down and recommend the most cost-effective solution.</p>",
+    "image": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=800",
+    "date": "2024-12-25",
+    "readTime": "4 min read"
+  },
+  {
+    "id": 7,
+    "slug": "ipad-screen-cracked-repair-guide",
+    "title": "iPad Screen Cracked? Complete Repair Guide",
+    "category": "ipad",
+    "excerpt": "Cracked your iPad screen? Here's everything you need to know about iPad screen repair options and costs.",
+    "content": "<p>iPads are amazing devices, but their large glass screens are vulnerable to drops. If you're staring at a web of cracks, here's what you need to know.</p><h2>Types of iPad Screen Damage</h2><ul><li><strong>Glass only</strong> - The display still works perfectly, just the outer glass is cracked</li><li><strong>LCD damage</strong> - You see lines, discoloration, or dead spots</li><li><strong>Digitizer damage</strong> - Touch doesn't respond in certain areas</li></ul><h2>iPad Repair Considerations</h2><p>iPad repairs are more complex than iPhone repairs because:</p><ul><li>The screen is glued down with strong adhesive</li><li>Removal requires careful heating to soften the glue</li><li>Home buttons (on older models) have Touch ID that must be preserved</li><li>Newer iPads have the glass and LCD fused together</li></ul><h2>Is Repair Worth It?</h2><p>For iPads less than 3 years old, repair almost always makes sense. The cost is typically 40-60% of buying new, and you keep all your data and apps.</p><h2>Repair Time</h2><p>At Repair Pros, most iPad screen repairs take 1-2 hours depending on the model. We test everything thoroughly before returning your device.</p>",
+    "image": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=800",
+    "date": "2024-12-20",
+    "readTime": "4 min read"
+  },
+  {
+    "id": 8,
+    "slug": "phone-wont-charge-common-problems",
+    "title": "Phone Won't Charge? Common Charging Port Problems",
+    "category": "tips",
+    "excerpt": "When your phone stops charging, the problem is often simpler than you think. Learn the common causes and fixes.",
+    "content": "<p>A phone that won't charge is incredibly frustrating. Before assuming the worst, let's troubleshoot the most common causes.</p><h2>Check These First</h2><ol><li><strong>Try a different cable</strong> - Cables fail more often than ports</li><li><strong>Try a different charger</strong> - Wall adapters can die too</li><li><strong>Check for lint</strong> - Pocket lint is the #1 cause of charging issues</li><li><strong>Inspect the port</strong> - Look for bent pins or debris</li></ol><h2>The Lint Problem</h2><p>Every time your phone goes in your pocket, it collects tiny fibers. Over time, these compress in the charging port and prevent the cable from fully seating. A careful cleaning with a toothpick often solves the problem instantly.</p><h2>When the Port Needs Replacement</h2><p>If cleaning doesn't help, the charging port itself may be damaged. Signs include:</p><ul><li>Cable feels loose or falls out</li><li>Phone only charges at certain angles</li><li>Visible damage to the port</li><li>Wireless charging works but wired doesn't</li></ul><p>Charging port replacement is a common repair at Repair Pros. We can usually complete it in under an hour.</p>",
+    "image": "https://images.unsplash.com/photo-1583863788434-e58a36330cf0?w=800",
+    "date": "2024-12-15",
+    "readTime": "3 min read"
+  },
+  {
+    "id": 9,
+    "slug": "playstation-overheating-solutions",
+    "title": "PlayStation Overheating Solutions",
+    "category": "console",
+    "excerpt": "Is your PlayStation shutting down from overheating? Learn how to diagnose and fix thermal issues.",
+    "content": "<p>When your PlayStation overheats, it'll either get extremely loud, shut down unexpectedly, or display an overheating warning. Here's how to fix it.</p><h2>Why Consoles Overheat</h2><ul><li><strong>Dust buildup</strong> - The #1 cause. Dust blocks airflow and insulates heat</li><li><strong>Old thermal paste</strong> - The heat-conducting paste dries out after years</li><li><strong>Poor ventilation</strong> - Console crammed in a tight entertainment center</li><li><strong>Failed fan</strong> - Less common but possible</li></ul><h2>DIY Prevention</h2><ul><li>Keep your console in an open, well-ventilated area</li><li>Leave 4+ inches of clearance on all sides</li><li>Vacuum the vents regularly (carefully, from outside)</li><li>Don't place anything on top of the console</li><li>Consider a vertical stand for better airflow</li></ul><h2>Professional Cleaning</h2><p>If your console is already overheating, it needs internal cleaning. This involves:</p><ol><li>Complete disassembly</li><li>Removing all dust buildup</li><li>Replacing thermal paste</li><li>Testing fan operation</li></ol><p>At Repair Pros, our console cleaning service includes all of the above and typically extends the life of your PlayStation by years.</p>",
+    "image": "https://images.unsplash.com/photo-1606144042614-b2417e99c4e3?w=800",
+    "date": "2024-12-10",
+    "readTime": "4 min read"
+  },
+  {
+    "id": 10,
+    "slug": "backup-before-repair",
+    "title": "Why You Should Always Backup Before Repair",
+    "category": "tips",
+    "excerpt": "Planning to get your device repaired? Here's why backing up your data first is absolutely essential.",
+    "content": "<p>We always recommend backing up your device before any repair. Here's why it matters and how to do it properly.</p><h2>Why Backups Matter</h2><p>While most repairs don't affect your data, unexpected things can happen:</p><ul><li>Severe damage may require component replacement that erases data</li><li>Software corruption can occur during hardware repairs</li><li>Some repairs (like motherboard replacement) mean a fresh start</li><li>If repair isn't possible, you'll want your data for your new device</li></ul><h2>How to Backup Your iPhone</h2><ol><li><strong>iCloud</strong> - Settings → Your Name → iCloud → iCloud Backup → Back Up Now</li><li><strong>Computer</strong> - Connect to Mac/PC, open Finder/iTunes, click Back Up Now</li></ol><h2>How to Backup Your Android</h2><ol><li><strong>Google</strong> - Settings → System → Backup → Back up now</li><li><strong>Samsung</strong> - Settings → Accounts → Samsung Cloud → Back up data</li></ol><h2>What If Your Phone Won't Turn On?</h2><p>If your device is too damaged to backup, bring it to us. We may be able to recover your data during the repair process, but this isn't always possible. Regular backups are your best protection.</p>",
+    "image": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800",
+    "date": "2024-12-05",
+    "readTime": "3 min read"
+  },
+  {
+    "id": 11,
+    "slug": "samsung-galaxy-screen-replacement",
+    "title": "Samsung Galaxy Screen Replacement",
+    "category": "samsung",
+    "excerpt": "Samsung screens are beautiful but expensive. Here's what to know about Galaxy screen repairs.",
+    "content": "<p>Samsung's Galaxy phones feature stunning AMOLED displays, but when they break, repairs can be costly. Here's what you should know.</p><h2>Why Samsung Screens Cost More</h2><p>Samsung uses curved-edge AMOLED technology that provides:</p><ul><li>Perfect blacks and vibrant colors</li><li>Edge-to-edge displays</li><li>Higher resolution</li></ul><p>This technology is more expensive to manufacture and harder to replace than flat LCD screens.</p><h2>Screen Replacement Process</h2><ol><li>Remove back glass (Samsung phones open from the back)</li><li>Disconnect battery for safety</li><li>Remove frame and internal components</li><li>Heat and separate damaged display</li><li>Install new display assembly</li><li>Test all functions thoroughly</li><li>Reassemble and seal</li></ol><h2>Quality Matters</h2><p>Cheap Samsung screens are everywhere online, but they're usually low-quality replicas that:</p><ul><li>Have washed-out colors</li><li>Lack proper brightness</li><li>May not respond correctly to touch</li><li>Fail quickly</li></ul><p>At Repair Pros, we use high-quality replacement screens that match Samsung's specifications, backed by our 90-day warranty.</p>",
+    "image": "https://images.unsplash.com/photo-1610945415295-d9bbf067e59c?w=800",
+    "date": "2024-12-01",
+    "readTime": "4 min read"
+  },
+  {
+    "id": 12,
+    "slug": "make-phone-last-longer",
+    "title": "10 Ways to Make Your Phone Last Longer",
+    "category": "tips",
+    "excerpt": "Want to get more years out of your smartphone? These tips will help extend your phone's lifespan.",
+    "content": "<p>Smartphones are expensive, so making yours last longer just makes sense. Here are 10 proven ways to extend your phone's life.</p><h2>1. Use a Quality Case</h2><p>A good case prevents the drops that cause most damage. Look for raised edges that protect the screen when placed face-down.</p><h2>2. Apply a Screen Protector</h2><p>Tempered glass protectors absorb impacts and can be replaced cheaply if they crack.</p><h2>3. Avoid Extreme Temperatures</h2><p>Don't leave your phone in a hot car or use it in freezing conditions. Extreme temperatures damage batteries permanently.</p><h2>4. Keep It Clean</h2><p>Regularly clean ports and speakers to prevent debris buildup.</p><h2>5. Manage Battery Health</h2><p>Avoid letting your battery drain to 0% regularly. Keep it between 20-80% for optimal longevity.</p><h2>6. Update Your Software</h2><p>Updates include security patches and optimizations that keep your phone running smoothly.</p><h2>7. Clear Storage Regularly</h2><p>A full storage drive slows performance. Delete unused apps and old photos.</p><h2>8. Use Original Chargers</h2><p>Cheap chargers can damage your battery over time.</p><h2>9. Restart Weekly</h2><p>A fresh restart clears temporary files and refreshes memory.</p><h2>10. Get Repairs Promptly</h2><p>Small problems become big ones if ignored. A cracked screen can let in moisture; a failing battery can damage other components.</p>",
+    "image": "https://images.unsplash.com/photo-1512054502232-10a0a035d672?w=800",
+    "date": "2024-11-25",
+    "readTime": "5 min read"
+  }
+]
