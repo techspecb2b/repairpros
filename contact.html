@@ -115,16 +115,14 @@
                     <h3><i data-lucide="map-pin" style="width:20px;height:20px;"></i> Location</h3>
                     <a href="https://maps.google.com/?q=9659+LA-1+Mooringsport+LA+71060">9659 LA-1<br>Mooringsport, LA 71060</a>
                     <div class="map-container">
-                        <a href="https://maps.google.com/?q=9659+LA-1+Mooringsport+LA+71060" target="_blank">
-                            <i data-lucide="external-link" style="width:18px;height:18px;"></i> Open in Google Maps
-                        </a>
+                        <iframe src="https://www.google.com/maps/embed?pb=!3m2!1sen!2sus!4v1768796665990!5m2!1sen!2sus!6m8!1m7!1sY3YvFejeDL1pTrhZEBXC0w!2m2!1d32.68876302270665!2d-93.93414154418255!3f201.9198142873521!4f-0.6495743082738556!5f0.7820865974627469" width="100%" height="200" style="border:0;border-radius:12px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                 </div>
 
                 <div class="info-card">
                     <h3><i data-lucide="phone" style="width:20px;height:20px;"></i> Phone & Email</h3>
                     <a href="tel:318-996-3362">(318) 996-3362</a>
-                    <a href="/cdn-cgi/l/email-protection#88fcf1e4edfac8faedf8e9e1faf8fae7fba6fdfb"><span class="__cf_email__" data-cfemail="73070a1f160133011603121a0103011c005d0600">[email&#160;protected]</span></a>
+                    <a href="mailto:tyler@repairpros.us">tyler@repairpros.us</a>
                 </div>
 
                 <div class="info-card">
@@ -146,11 +144,21 @@
         </div>
     </footer>
 
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+    <script>
         document.addEventListener('DOMContentLoaded', function() {
             if (typeof lucide !== 'undefined') {
                 lucide.createIcons();
             }
         });
         window.addEventListener('load', function() {
-            if (typeof luc
+            if (typeof lucide !== 'undefined') {
+                lucide.createIcons();
+            }
+        });
+
+        function toggleMobileMenu() {
+            document.getElementById('mobileMenu').classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
