@@ -34,8 +34,7 @@
         nav { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; background: rgba(0, 0, 0, 0.9); backdrop-filter: blur(20px); border-bottom: 1px solid rgba(51, 198, 244, 0.15); }
         .nav-container { max-width: 1400px; margin: 0 auto; padding: 0 2rem; display: flex; justify-content: space-between; align-items: center; height: 80px; }
         .logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
-        .logo-text { font-weight: 800; font-size: 1.5rem; color: var(--light); letter-spacing: -0.5px; }
-        .logo-text span { color: var(--primary); }
+        .logo-img { height: 45px; width: auto; }
         .nav-links { display: flex; gap: 2.5rem; list-style: none; }
         .nav-links a { text-decoration: none; color: var(--text-muted); font-weight: 500; font-size: 0.95rem; transition: all 0.3s ease; position: relative; }
         .nav-links a:hover, .nav-links a.active { color: var(--primary); }
@@ -241,7 +240,7 @@
     <nav>
         <div class="nav-container">
             <a href="index.html" class="logo">
-                <span class="logo-text">Repair<span>Pros</span></span>
+                <img src="logo.svg" alt="Repair Pros" class="logo-img">
             </a>
             <ul class="nav-links">
                 <li><a href="index.html" class="active">Home</a></li>
@@ -267,7 +266,7 @@
         <div class="hero-container">
             <div class="hero-content">
                 <h1>Expert Device <span>Repair</span> You Can Trust</h1>
-                <p>Professional phone, tablet, computer and game console repairs with same-day service and 90-day warranty. Serving Mooringsport & Shreveport, Louisiana.</p>
+                <p>Professional phone, tablet, computer and game console repairs with same-day service and limited lifetime warranty. Serving Mooringsport & Shreveport, Louisiana.</p>
                 <div class="hero-buttons">
                     <a href="book.html" class="btn-primary"><i data-lucide="calendar" style="width:20px;height:20px;"></i> Book Repair</a>
                     <a href="tel:318-996-3362" class="btn-secondary">Call (318) 996-3362</a>
@@ -375,7 +374,7 @@
                             <i data-lucide="shield-check" style="width:24px;height:24px;"></i>
                         </div>
                         <div class="floating-card-content">
-                            <span class="floating-card-text">90-Day Warranty</span>
+                            <span class="floating-card-text">Limited Lifetime Warranty</span>
                             <span class="floating-card-sub">On all repairs</span>
                         </div>
                     </div>
@@ -395,8 +394,8 @@
                 <div class="stat-label">Devices Repaired</div>
             </div>
             <div class="stat-item">
-                <div class="stat-number">90</div>
-                <div class="stat-label">Day Warranty</div>
+                <div class="stat-number">✓</div>
+                <div class="stat-label">Lifetime Warranty</div>
             </div>
             <div class="stat-item">
                 <div class="stat-number">4.9</div>
@@ -451,7 +450,7 @@
             </div>
             <div class="why-card">
                 <i data-lucide="shield-check" style="width:32px;height:32px;"></i>
-                <h3>90-Day Warranty</h3>
+                <h3>Limited Lifetime Warranty</h3>
                 <p>Every repair backed by our comprehensive warranty. If something goes wrong, we'll make it right at no extra cost.</p>
             </div>
             <div class="why-card">
@@ -543,7 +542,7 @@
         <div class="footer-container">
             <div class="footer-grid">
                 <div class="footer-brand">
-                    <span class="logo-text">Repair<span>Pros</span></span>
+                    <img src="logo.svg" alt="Repair Pros" class="logo-img">
                     <p>Professional device repair you can trust. Fast, reliable, and affordable repairs with warranty.</p>
                     <div class="social-links">
                         <a href="#" class="social-link"><i data-lucide="facebook" style="width:18px;height:18px;"></i></a>
@@ -573,18 +572,18 @@
                     <ul>
                         <li><a href="https://maps.google.com/?q=9659+LA-1+Mooringsport+LA">9659 LA-1, Mooringsport, LA</a></li>
                         <li><a href="tel:318-996-3362">(318) 996-3362</a></li>
-                        <li><a href="mailto:tyler@repairpros.us">tyler@repairpros.us</a></li>
+                        <li><a href="/cdn-cgi/l/email-protection#5125283d34231123342130382321233e227f2422"><span class="__cf_email__" data-cfemail="a3d7dacfc6d1e3d1c6d3c2cad1d3d1ccd08dd6d0">[email&#160;protected]</span></a></li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
                 <p>&copy; 2025 Repair Pros. All rights reserved.</p>
-                <p>90-Day Warranty on All Repairs</p>
+                <p>Limited Lifetime Warranty on All Repairs</p>
             </div>
         </div>
     </footer>
 
-    <script>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
         // Initialize Lucide icons after DOM is ready
         document.addEventListener('DOMContentLoaded', function() {
             if (typeof lucide !== 'undefined') {
@@ -603,13 +602,4 @@
             const screen = el.querySelector('.phone-screen');
             screen.classList.toggle('cracked');
             screen.classList.toggle('fixed');
-            el.classList.toggle('fixed');
-            if (typeof lucide !== 'undefined') lucide.createIcons();
-        }
-
-        function toggleMobileMenu() {
-            document.getElementById('mobileMenu').classList.toggle('active');
-        }
-    </script>
-</body>
-</html>
+            el.classList.toggle('f
