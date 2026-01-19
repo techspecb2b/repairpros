@@ -29,8 +29,7 @@
         nav { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; background: rgba(0, 0, 0, 0.9); backdrop-filter: blur(20px); border-bottom: 1px solid rgba(51, 198, 244, 0.15); }
         .nav-container { max-width: 1400px; margin: 0 auto; padding: 0 2rem; display: flex; justify-content: space-between; align-items: center; height: 80px; }
         .logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
-        .logo-text { font-weight: 800; font-size: 1.5rem; color: var(--light); }
-        .logo-text span { color: var(--primary); }
+        .logo-img { height: 45px; width: auto; }
         .nav-links { display: flex; gap: 2.5rem; list-style: none; }
         .nav-links a { text-decoration: none; color: var(--text-muted); font-weight: 500; transition: all 0.3s ease; }
         .nav-links a:hover, .nav-links a.active { color: var(--primary); }
@@ -82,7 +81,7 @@
     <nav>
         <div class="nav-container">
             <a href="index.html" class="logo">
-                <span class="logo-text">Repair<span>Pros</span></span>
+                <img src="logo.svg" alt="Repair Pros" class="logo-img">
             </a>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
@@ -124,7 +123,7 @@
                 <div class="info-card">
                     <h3><i data-lucide="phone" style="width:20px;height:20px;"></i> Phone & Email</h3>
                     <a href="tel:318-996-3362">(318) 996-3362</a>
-                    <a href="mailto:tyler@repairpros.us">tyler@repairpros.us</a>
+                    <a href="/cdn-cgi/l/email-protection#88fcf1e4edfac8faedf8e9e1faf8fae7fba6fdfb"><span class="__cf_email__" data-cfemail="73070a1f160133011603121a0103011c005d0600">[email&#160;protected]</span></a>
                 </div>
 
                 <div class="info-card">
@@ -142,25 +141,15 @@
     <footer>
         <div class="footer-bottom">
             <p>&copy; 2025 Repair Pros. All rights reserved.</p>
-            <p>90-Day Warranty on All Repairs</p>
+            <p>Limited Lifetime Warranty on All Repairs</p>
         </div>
     </footer>
 
-    <script>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
         document.addEventListener('DOMContentLoaded', function() {
             if (typeof lucide !== 'undefined') {
                 lucide.createIcons();
             }
         });
         window.addEventListener('load', function() {
-            if (typeof lucide !== 'undefined') {
-                lucide.createIcons();
-            }
-        });
-
-        function toggleMobileMenu() {
-            document.getElementById('mobileMenu').classList.toggle('active');
-        }
-    </script>
-</body>
-</html>
+            if (typeof luc
