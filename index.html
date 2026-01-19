@@ -572,7 +572,7 @@
                     <ul>
                         <li><a href="https://maps.google.com/?q=9659+LA-1+Mooringsport+LA">9659 LA-1, Mooringsport, LA</a></li>
                         <li><a href="tel:318-996-3362">(318) 996-3362</a></li>
-                        <li><a href="/cdn-cgi/l/email-protection#5125283d34231123342130382321233e227f2422"><span class="__cf_email__" data-cfemail="a3d7dacfc6d1e3d1c6d3c2cad1d3d1ccd08dd6d0">[email&#160;protected]</span></a></li>
+                        <li><a href="mailto:tyler@repairpros.us">tyler@repairpros.us</a></li>
                     </ul>
                 </div>
             </div>
@@ -583,7 +583,7 @@
         </div>
     </footer>
 
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+    <script>
         // Initialize Lucide icons after DOM is ready
         document.addEventListener('DOMContentLoaded', function() {
             if (typeof lucide !== 'undefined') {
@@ -602,4 +602,13 @@
             const screen = el.querySelector('.phone-screen');
             screen.classList.toggle('cracked');
             screen.classList.toggle('fixed');
-            el.classList.toggle('f
+            el.classList.toggle('fixed');
+            if (typeof lucide !== 'undefined') lucide.createIcons();
+        }
+
+        function toggleMobileMenu() {
+            document.getElementById('mobileMenu').classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
